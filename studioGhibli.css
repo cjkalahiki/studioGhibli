@@ -1,0 +1,88 @@
+body {
+    background-image: url('https://vignette.wikia.nocookie.net/studio-ghibli/images/5/50/Wiki-background/revision/latest?cb=20181117170530');
+    background-size: 100%;
+    background-position: fixed;
+
+}
+
+.header {
+    height: 200px;
+    float: center;
+    text-align: center;
+
+    background-color:#00aff0;
+    background-image: url('https://pixelz.cc/wp-content/uploads/2018/12/studio-ghibli-logo-uhd-4k-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-position: right 10%;
+    background-size: contain;
+    box-shadow: 10px 10px 30px #60bbd6;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.header h1 {
+    /* input ghibli font */
+    color: whitesmoke;
+    position: relative;
+    top: 15%;
+    right: 10%;
+
+    font-size: 50px;
+    text-decoration: underline;
+    text-shadow: 2px 2px black;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.submitButton {
+    width: 420px;
+    
+    position:relative;
+    flex: 2;
+
+    background-color:#00aff0;
+    color: white;
+    font-size: 20pt;
+
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color:#187ba0;
+}
+
+.container {
+    margin: 20px;
+    background-color: rgba(140, 148, 151, 0.856);
+}
+
+.character {
+    flex: 3;
+    color:white;
+    text-shadow: 2px 2px black;
+
+    background-color:#00aff0;
+    padding: 2rem;
+
+    margin: 2rem;
+}
+
+.character h2 {
+    font-size: 30pt;
+}
+
+.character p {
+    font-size: 15pt;
+}
