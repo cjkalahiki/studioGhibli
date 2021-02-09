@@ -19,6 +19,7 @@ function fetchPeople(e) {
             return result.json();
         })
         .then(function(json){
+            console.log(json);
             let randomNumber = Math.round((Math.random()*42)); //0-42
             console.log(json[randomNumber]); //grabs people endpoint
             displayResults(json[randomNumber]); //grabs a random person from the people endpoint
@@ -33,6 +34,7 @@ function displayResults(json) {
     section.style.display = 'block';
  
     let name = document.createElement('h2');
+    let film = document.createElement('p');
     let age = document.createElement('p');
     let species = document.createElement('p');
     let gender = document.createElement('p');
@@ -75,9 +77,23 @@ function displayResults(json) {
             species.textContent = `Species: ${json.name}`
         })
     
+    fetch(json.films)
+        .then(function(result){
+            return result.json();
+        })
+        .then(function(json){
+            if (json.title){
+                console.log(json.title);
+                film.textContent = `Film: ${json.title}`;
+            } else {
+                film.textContent =`Film: Multiple Films`
+            }
+        })
+    
     section.appendChild(name);
     section.appendChild(age);
     section.appendChild(gender); 
     section.appendChild(eyeColor);
     section.appendChild(species);
+    section.appendChild(film);
 }

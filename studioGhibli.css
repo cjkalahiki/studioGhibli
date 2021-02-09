@@ -3,6 +3,8 @@ body {
     background-size: 100%;
     background-position: fixed;
 
+    font-family: "Ghibli-Bold";
+    src: url('webFonts/GhibliBold/font.woff2') format('woff2'), url('webFonts/GhibliBold/font.woff') format('woff');
 }
 
 .header {
